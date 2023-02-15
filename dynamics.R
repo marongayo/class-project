@@ -9,14 +9,10 @@ ggplot(dynamics, aes(x=HS_Head)) +
   theme(plot.title = element_text(hjust = 0.5))
   
 table(dynamics$HS_Head)
-head(dynamics)
+#head(dynamics)
 dynamics$house_type <- factor(dynamics$house_type)
 
-ggplot(dynamics, aes(x=reorder(house_type, -..count..), y=HS_size, fill=as.factor(HS_size))) +
-  geom_bar(position="dodge") +
-  labs(title="Group and Gender Distribution", x="Group", y="Count") +
-  theme(plot.title = element_text(hjust = 0.5))+
-  scale_fill_manual(values = c("red", "brown", "green","yellow",'orange','blue'))
+
 
 
 
